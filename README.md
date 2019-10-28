@@ -3,8 +3,8 @@ Installs busybox -based debug environment for Scratch-based Docker-containers. W
 
 The problem is that if you build a high security container with minimum attack surface, and the most lightweight container possible, you don't have any debug tools.
 
-#Final phase
-FROM scratch
+    #Final phase
+    FROM scratch
 
 Usage:
     ./debug.sh podname -k kubeconfig.yml -n my-namespace
