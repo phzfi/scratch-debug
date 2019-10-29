@@ -147,6 +147,10 @@ INSTALLCMD="${INSTALLCMD} && ${DOCKERCMD} cp /tmp ${CONTAINER_ID}:/"
 INSTALLCMD="${INSTALLCMD} && ${DOCKERCMD} cp /bin/busybox ${CONTAINER_ID}:${INSTALL_DIR}/busybox"
 # Tell busybox to install (create symlinks for commands) into the install directory.
 INSTALLCMD="${INSTALLCMD} && ${DOCKERCMD} exec ${CONTAINER_ID} ${INSTALL_DIR}/busybox --install -s ${INSTALL_DIR}"
+#Download utcpdump
+INSTALLCMD="${INSTALLCMD} && wget -qO /tmp/utcpdump.tar.gz https://files.phz.fi/mirror/utcpdump-0.1-standalone.tar.gz"
+#Extract utcpdump
+INSTALLCMD="${INSTALLCMD} && cd / && tar xzf /tmp/utcpdump.tar.gz"
 
 DEBUGGER_NAME=$(${KUBECTL} create -o name -f - <<EOF
 apiVersion: v1
