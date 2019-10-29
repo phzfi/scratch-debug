@@ -1,13 +1,10 @@
 #!/bin/bash
 # Original script at https://github.com/kubernetes-retired/contrib/blob/master/scratch-debugger/debug.sh
-# By Google Developers
 # Tim Allclair
 # Ahmet Alp Balkan
 #
-# 2019 Forked by PHZ Full Stack Oy
-# https://phz.fi
+# 2019 Forked by Antti Hätinen <pharazon@phz.fi>
 # https://github.com/phzfi
-# Antti Hätinen <pharazon@phz.fi>
 
 # Copyright 2017 The Kubernetes Authors.
 #
